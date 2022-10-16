@@ -1,0 +1,6 @@
+{
+  "name": "backend",
+  "region": "ap-south-1",
+  "lint": true,
+  "typeCheck": false
+}

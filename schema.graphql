@@ -1,0 +1,23 @@
+schema {
+  mutation: Mutation
+  quary: Quary
+}
+type Quary{
+  getUsers(): [User]
+}
+type Mutation {
+  createUser(userId: String!, name: String!, email: String!, picture: String): User
+}
+
+type User {
+  _id: ID!
+  userId: String!
+  name: String!
+  email: String!
+  phone: String!
+  picture: String
+  active: Boolean!
+  confirmed: Boolean!
+  createdAt: String
+  updatedAt: String
+}

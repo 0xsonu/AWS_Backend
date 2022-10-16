@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "sst start",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit",
+    "test": "sst load-config -- vitest run"
+  },
+  "eslintConfig": {
+    "extends": [
+      "serverless-stack"
+    ]
+  },
+  "devDependencies": {
+    "@serverless-stack/cli": "^1.15.14",
+    "@serverless-stack/resources": "^1.15.14",
+    "@tsconfig/node16": "^1.0.3",
+    "aws-cdk-lib": "2.39.1",
+    "typescript": "^4.8.4",
+    "vitest": "^0.24.3"
+  },
+  "dependencies": {
+    "aws-cdk": "2.39.1",
+    "mongoose": "^6.6.5"
+  }
+}
