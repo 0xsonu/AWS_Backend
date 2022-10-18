@@ -17,16 +17,13 @@ export const handler = async (event: AppSyncEvent): Promise<any> => {
     switch (fieldName) {
       case 'getRecords':
         const fetchedRecord = await Record.find().limit(10);
-        console.log(fetchedRecord);
         return fetchedRecord;
       case 'getRecordById':
         const { id } = args;
         const fetchedRecordById = await Record.findById(id);
-        console.log(fetchedRecordById);
         return fetchedRecordById;
       case 'createRecord':
         const createdRecord = await Record.create(args);
-        console.log(createdRecord);
         return createdRecord;
       default:
         throw new Error('Something went wrong! Please check your resolver mapping template');
