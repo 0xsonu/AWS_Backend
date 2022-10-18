@@ -1,4 +1,4 @@
 export const userResolvers = {
-  'Quary getUsers': 'userLambda',
+  'Query getUsers': 'userLambda',
   'Mutation createUser': 'userLambda',
 };
