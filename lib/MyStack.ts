@@ -14,6 +14,7 @@ export function MyStack({ stack }: StackContext) {
     schema: schema,
     defaults: {
       function: {
+        timeout: 20,
         environment: {
           DATABASE:
             process.env.DATABASE ||
@@ -47,6 +48,7 @@ export function MyStack({ stack }: StackContext) {
     dataSources: dataSources,
     resolvers: { ...resolvers },
   });
+  api.attachPermissions(['s3']);
 
   // Show the AppSync API Id in the output
   stack.addOutputs({

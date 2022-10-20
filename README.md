@@ -1,4 +1,4 @@
-# How to create a GraphQL API with AWS AppSync
+# GraphQL API with AWS AppSync and MongoDB Template
 
 An example serverless app created with SST.
 
@@ -9,9 +9,43 @@ An example serverless app created with SST.
 Install the example.
 
 ```bash
-$ npx create-sst@latest --template=examples/graphql-appsync
-# Or with Yarn
-$ yarn create sst --template=examples/graphql-appsync
+git clone https://github.com/SonuKumar81800/AWS_Backend.git
+```
+
+```bash
+cd AWS_Backend
+```
+
+```cmd
+npm install || yarn install
+```
+
+Install and Configure AWS cli
+
+- Download AWS Cli too from [AWS Official](https://aws.amazon.com/cli/)
+- Install it in your local system.
+- Once your local environment is ready, head over to the AppSync console and get your access key id and secret [here](https://console.aws.amazon.com/appsync).
+
+Open Terminal and follow these steps.
+
+```bash
+aws configure
+```
+
+```bash
+AWS Access Key ID: <your_access_key_id>
+```
+
+```bash
+AWS Secret Access Key:  <your_access_key_secret>
+```
+
+```bash
+Default region name:  <select_your_region>
+```
+
+```bash
+Default output format: json
 ```
 
 Start the Live Lambda Development environment.
@@ -20,15 +54,15 @@ Start the Live Lambda Development environment.
 $ npm sst start
 ```
 
-Once your local environment is ready, [head over to the AppSync console](https://console.aws.amazon.com/appsync).
-
 These Key Value you need to add to [`.env`](./.env) file
 
 ```env
-MONGO_USERNAME=<mongodb-username>
-MONGO_PASSWORD=<mongodb-username>
-GRAPHQL_API_URL=
-GRAPHQL_API_KEY=
+MONGO_USERNAME=<env_value>
+MONGO_PASSWORD=<env_value>
+DATABASE_NAME=<env_value>
+DATABASE=<env_value>
+GRAPHQL_API_URL=<env_value>
+GRAPHQL_API_KEY=<env_value>
 ```
 
 ## Commands

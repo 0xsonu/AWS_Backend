@@ -2,10 +2,13 @@ schema {
   query: Query
   mutation: Mutation
 }
+
 type Query {
+  getUsers: [User]
   getRecords: [Record]
   getRecordById(id: ID!): Record
 }
+
 type Mutation {
   createRecord(
     name: String!
@@ -18,6 +21,7 @@ type Mutation {
     chassNumber: String
     engileneNumber: String
   ): Record
+  createUser(name: String!, email: String!, address: String!, mobile: String!): User
 }
 
 type Record {

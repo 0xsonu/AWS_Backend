@@ -1,4 +1,4 @@
-// import { userResolvers } from '../src/user/resolvers';
+import { userResolvers } from '../src/user/resolvers';
 import { recordResolvers } from '../src/record/resolvers';
 
-export default { ...recordResolvers };
+export default { ...recordResolvers, ...userResolvers };

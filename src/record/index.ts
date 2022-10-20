@@ -25,6 +25,9 @@ export const handler = async (event: AppSyncEvent): Promise<any> => {
       case 'createRecord':
         const createdRecord = await Record.create(args);
         return createdRecord;
+      case 'updateRecord':
+        const updatedRecord = await Record.findByIdAndUpdate(args.id, args.updateValue);
+        return updatedRecord;
       default:
         throw new Error('Something went wrong! Please check your resolver mapping template');
     }
