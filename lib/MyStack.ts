@@ -48,7 +48,7 @@ export function MyStack({ stack }: StackContext) {
     dataSources: dataSources,
     resolvers: { ...resolvers },
   });
-  api.attachPermissions(['s3']);
+  api.attachPermissions('*');
 
   // Show the AppSync API Id in the output
   stack.addOutputs({

@@ -5,38 +5,10 @@ schema {
 
 type Query {
   getUsers: [User]
-  getRecords: [Record]
-  getRecordById(id: ID!): Record
 }
 
 type Mutation {
-  createRecord(
-    name: String!
-    fatherName: String!
-    address: String!
-    mobile: String!
-    imei: String
-    fir: String
-    description: String
-    chassNumber: String
-    engileneNumber: String
-  ): Record
   createUser(name: String!, email: String!, address: String!, mobile: String!): User
-}
-
-type Record {
-  _id: ID!
-  name: String!
-  fatherName: String!
-  address: String!
-  mobile: String!
-  imei: String
-  fir: String
-  description: String
-  chassNumber: String
-  engileneNumber: String
-  createdAt: String!
-  updatedAt: String!
 }
 
 type User {

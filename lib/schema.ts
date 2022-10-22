@@ -1,1 +1,1 @@
-export default 'schema.graphql';
+export default ['schema.graphql', 'src/record/utils/record.graphql'];

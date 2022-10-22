@@ -17,6 +17,7 @@
     ]
   },
   "devDependencies": {
+    "@graphql-tools/merge": "^8.3.6",
     "@serverless-stack/cli": "^1.15.14",
     "@serverless-stack/resources": "^1.15.14",
     "@tsconfig/node16": "^1.0.3",

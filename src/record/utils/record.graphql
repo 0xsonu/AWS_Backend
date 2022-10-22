@@ -1,0 +1,45 @@
+type Record {
+  _id: ID!
+  name: String!
+  fatherName: String!
+  address: String!
+  mobile: String!
+  imei: String
+  fir: String
+  description: String
+  chassNumber: String
+  engileneNumber: String
+  createdAt: String!
+  updatedAt: String!
+}
+
+type Query {
+  getRecords: [Record]
+  getRecordById(id: ID!): Record
+}
+
+type Mutation {
+  createRecord(
+    name: String!
+    fatherName: String!
+    address: String!
+    mobile: String!
+    imei: String
+    fir: String
+    description: String
+    chassNumber: String
+    engileneNumber: String
+  ): Record
+  updateRecord(
+    id: ID!
+    name: String
+    fatherName: String
+    address: String
+    mobile: String
+    imei: String
+    fir: String
+    description: String
+    chassNumber: String
+    engileneNumber: String
+  ): Record
+}
